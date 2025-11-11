@@ -1,9 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Scene from './components/Scene'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Scene } from './components/Scene'; // Importamos el componente de escena
+import './index.css'; // Importamos los estilos globales, incluyendo Tailwind y fuentes
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    {/* El componente Scene manejará tanto la vista 3D (Canvas) 
+      como el manejo de estado y la UI 2D (Menús, HUD).
+    */}
     <Scene />
-  </StrictMode>,
-)
+  </React.StrictMode>,
+);

@@ -1,3 +1,66 @@
+/* ===============================
+   ./src/index.css
+   =============================== */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* --------------------
+   Estilos Personalizados
+   -------------------- */
+
+@font-face {
+    font-family: 'Watermelon';
+    /* Asegúrate que la ruta sea correcta */
+    src: url('./assets/fonts/Watermelon.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Watermelon Days';
+    /* Asegúrate que la ruta sea correcta */
+    src: url('./assets/fonts/Watermelon Days.ttf') format('truetype');
+}
+
+/* Clases de utilidad para las fuentes */
+.font-watermelon {
+    font-family: 'Watermelon', sans-serif;
+}
+
+.font-watermelon-days {
+    font-family: 'Watermelon Days', sans-serif;
+}
+
+/* Estilo para el trazo de texto (Webkit-specific) */
+.text-stroke-yellow {
+    -webkit-text-stroke: 2.3px #fdcb02;
+    -webkit-text-fill-color: white; /* Relleno blanco para el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para navegadores no-webkit */
+}
+
+/* El efecto de escala y trazo del menú principal */
+.menu-item-effect {
+    transition: all 0.2s ease;
+    -webkit-text-fill-color: white;
+}
+
+.menu-item-effect:hover {
+    transform: scale(1.15); 
+    -webkit-text-stroke: 5px #fdcb02;
+    cursor: pointer;
+}
+
+.menu-item-effect:active {
+    transform: scale(1.25);
+    -webkit-text-stroke: 5px #50ffff;
+}
+
+/* Estilos de botones (Aceptar/Regresar) */
+.accept-button-effect {
+    transition: transform 0.2s ease-in-out;
+}
+.accept-button-effect:hover {
+    transform: scale(1.1);
+}
+.accept-button-effect:active {
+    transform: scale(1.2);
+}
